@@ -1,6 +1,6 @@
 # 🏋️‍♂️ Coach Home Office para Programadores
 
-Proyecto de **asistente integral (ChatGPT)** para hombres programadores en **Home Office**, enfocado en **nutrición** y **entrenamiento funcional** con equipo básico (saco de box y polea). Diseñado para usuarios en **México (Puebla)** con rutinas y recetas simples, accesibles y sostenibles.
+Proyecto de **asistente integral (IA)** para hombres programadores en **Home Office**, enfocado en **nutrición** y **entrenamiento funcional** con equipo básico (saco de box y polea). Diseñado para usuarios en **México (Puebla)** con rutinas y recetas simples, accesibles y sostenibles.
 
 ---
 
@@ -8,20 +8,32 @@ Proyecto de **asistente integral (ChatGPT)** para hombres programadores en **Hom
 
 ```
 /README.md
-/descripcion_proyecto.md
-/nutricionista_chef.md
-/entrenamiento.md
+/contexto.md
+/prompt_nutricionista_chef.md
+/prompt_entrenamiento.md
 ```
 
-### `descripcion_proyecto.md`
+### `perfil.json.md`
+
+Archivo de configuración JSON que contiene TUS datos personales, equipo disponible, objetivos y preferencias. Este archivo es la "memoria" del proyecto y debe ser cargado para que el coach sepa quién eres sin preguntar.
+
+
+
+### `seguimiento.json.md`
+
+Archivo de LOGS. Aquí se guardará el histórico de tu progreso. El asistente generará bloques de código JSON al final de la semana para que tú solo copies y pegues aquí, permitiendo ver tu evolución en peso, medidas y fuerza.
+
+
+
+### `contexto.md`
 
 Prompt general del proyecto. Define el rol global del coach integral (nutrición + entrenamiento) y las reglas del formato, estilo y objetivos.
 
-### `nutricionista_chef.md`
+### `prompt_nutricionista_chef.md`
 
-Chat especializado en **recetas rápidas y saludables** adaptadas al usuario o su familia (esposa e hijo). Trabaja con los **ingredientes disponibles**, ofrece **sustitutos locales** y calcula **porciones, macros y costos aproximados en MXN**.
+Chat especializado en **recetas rápidas y saludables** adaptadas al usuario o su familia (conyugue e hijos). Trabaja con los **ingredientes disponibles**, ofrece **sustitutos locales** y calcula **porciones, macros y costos aproximados en MXN**.
 
-### `entrenamiento_saco_polea.md`
+### `prompt_entrenamiento.md`
 
 Chat para **entrenamientos de 30–40 min diarios** con **saco de box y polea**, más ejercicios de peso corporal. Diseñado para principiantes que buscan **bajar grasa, ganar fuerza y energía**. Explica ejercicios con detalle, tiempos, descansos y apps sugeridas para seguir la rutina.
 
@@ -35,18 +47,19 @@ Chat para **entrenamientos de 30–40 min diarios** con **saco de box y polea**,
 
 ---
 
-## 🧭 Cómo usarlo
+## compass Cómo usarlo
 
-1. Crea un **Proyecto nuevo** en ChatGPT.
-2. Usa `descripcion_proyecto.md` como **prompt base** del proyecto.
-3. Crea dos chats dentro del proyecto:
+1. Crea un **Proyecto nuevo** en ChatGPT (o Gemini).
+2. **PASO CRÍTICO:** Sube o pega el contenido de `perfil.json.md` en la base de conocimientos o en el primer mensaje.
+3. Usa `contexto.md` como **prompt base** del proyecto (instruyéndole que lea la configuración del JSON).
+4. Crea dos chats dentro del proyecto:
 
-   * Chat 1 → contenido de `nutricionista_chef.md`
-   * Chat 2 → contenido de `entrenamiento_saco_polea.md`
-4. Interactúa diario:
+   * Chat 1 → contenido de `prompt_nutricionista_chef.md`
+   * Chat 2 → contenido de `prompt_entrenamiento.md`
+5. Interactúa diario:
 
-   * Ejemplo nutrición → “Comida para 3 personas, tengo pollo, arroz y calabaza.”
-   * Ejemplo entrenamiento → “Hoy es miércoles, 30 min, tengo saco y polea. Dame la rutina.”
+   * Ejemplo nutrición → “Comida para hoy, tengo pollo y arroz.” (El bot ya sabrá que es para 3 personas y tus macros).
+   * Ejemplo entrenamiento → “Hoy es miércoles, dame la rutina.” (El bot ya sabe que tienes 30 min, saco y polea).
 
 ---
 
