@@ -1,4 +1,3 @@
-```json
 {
   "notas_uso": "Copia y pega el bloque nuevo al principio del array 'historial' para mantener el orden cronológico inverso (más reciente arriba).",
   "historial": [
@@ -16,4 +15,3 @@
     }
   ]
 }
-```
